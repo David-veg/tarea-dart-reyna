@@ -4,6 +4,11 @@ import 'dart:io';
 
 
 void main(List<String> arguments) {
+  menu();
+}
+
+void menu(){
+  bool salir =false;
   print('***MENU PRINCIPAL:***');
   print('1. AUTOS COMPACTOS');
   print('2. AUTOS LUJOS');
@@ -11,79 +16,162 @@ void main(List<String> arguments) {
   print('4. CAMIONETAS');
   print('5. SALITE BRO:');
 
-  print('***SUB MENU:***');
-          print('1. LISTAR');
-          print('2. REGISTRAR');
-          print('3. SALE PE');
+  print('Selecciona un Opcion:');
 
-  print('4. Selecciona un Opcion:');
+  var raa =stdin.readLineSync().toString();
   
-  String a = stdin.readLineSync();
-  print(a);
-  switch (a) {
+  switch (raa) {
     case "1":
-      {
-          print('***SUB MENU:***');
-          print('1. LISTAR');
-          print('2. REGISTRAR');
-          print('3. SALE PE');
-
-  String? b = stdin.readLineSync();
-          print(b);
-          switch (b) {
-            case "1":
-              {
-                print("REGISTRAR LIBRO");
-                print("-TITULO");
-                titulo = stdin.readLineSync();
-                print("-PRECIO");
-                precio = stdin.readLineSync();
-                print("-NUMEROS DE PAGINA");
-                np = stdin.readLineSync();
-                books[0] = Libro(titulo: "cambio", precio: "8so", np: "500");
-              }
-              break;
-            case "2":
-              {
-                print('***SUB MENU:***');
-                print('1. LISTAR');
-                print('2. REGISTRAR');
-                print('3. SALE PE');
-              }
-              break;
-            case "3":
-              {
-                print("****************");
-              }
-              break;
-
-            default:
-              {
-                print("Escoge otra opcion");
-              }
-              break;
-          }
-        }
-        break;
-      case "2":
-        {
-          print('***SUB MENU:***');
-          print('1. LISTAR');
-          print('2. REGISTRAR');
-          print('3. SALE PE');
-        }
-        break;
-      case "3":
-        {
-          print("MUCHAS GRACIAS POR SU VISITA");
-        }
-        break;
-
-      default:
-        {
-          print("OPCION ERRONEA");
-        }
-        break;
-    }
+      menuAutosCompactos();
+      break;
+    case "2":
+      menuAutosLujos();
+      break;
+    case "3":
+      menuAutosVagonetas();
+      break;
+    case "4":
+      menuAutosCamionetas();
+      break;
+    case "5":
+      print("**************");
+      break;
+    default:
+    print("Escoja otra opcion:");
   }
+}
 
+void menuAutosCompactos(){
+  bool salir =false;
+  
+  print("***Sub Menu***");
+  print("1- Registrar");
+  print("2- Listar");
+  print("3- Salir");
+   print("Ingresar nuevo Numero =");
+  var raa =stdin.readLineSync().toString();
+
+  switch (raa) {
+    case "1":
+      registrarCompactos();
+      break;
+    case "2":
+      listarCompactos();
+      break;
+    case "3":
+      menu();
+      break;
+    default:
+    print("Elija un numero ente las opciones");
+  }
+}
+
+void registrarCompactos( ) {
+
+}
+
+void listarCompactos( ) {
+
+}
+
+
+void menuAutosLujos(){
+  bool salir =false;
+ 
+
+  print("***Sub Menu***");
+  print("1- Registrar");
+  print("2- Listar");
+  print("3- Salir");
+   print("Ingresar nuevo Numero =");
+  var raa =stdin.readLineSync().toString();
+
+  switch (raa) {
+    case "1":
+      registrarLujos();
+      break;
+    case "2":
+      listarLujos();
+      break;
+    case "3":
+      menu();
+      break;
+    default:
+    print("Elija un numero ente las opciones");
+  }
+}
+
+void registrarLujos( ) {
+
+}
+
+void listarLujos( ) {
+
+}
+
+void menuAutosVagonetas(){
+  bool salir =false;
+
+  print("***Sub Menu***");
+  print("1- Registrar");
+  print("2- Listar");
+  print("3- Salir");
+  print("Ingresar nuevo Numero =");
+  
+  var raa =stdin.readLineSync().toString();
+
+  switch (raa) {
+    case "1":
+      registrarVagonetas();
+      break;
+    case "2":
+      listarVagonetas();
+      break;
+    case "3":
+      menu();
+      break;
+    default:
+    print("Elija un numero ente las opciones");
+  }
+}
+
+void registrarVagonetas( ) {
+
+}
+
+void listarVagonetas( ) {
+
+}
+
+void menuAutosCamionetas(){
+  bool salir =false;
+  
+  print("***Sub Menu***");
+  print("1- Registrar");
+  print("2- Listar");
+  print("3- Salir");
+  print("Ingresar nuevo Numero =");
+  var raa =stdin.readLineSync().toString();
+
+  switch (raa) {
+    case "1":
+      registrarCamionetas();
+      break;
+    case "2":
+      listarCamionetas();
+      break;
+    case "3":
+      menu();
+      break;
+    default:
+    print("Elija un numero ente las opciones");
+  }
+}
+
+void registrarCamionetas( ) {
+
+}
+
+void listarCamionetas( ) {
+
+}
